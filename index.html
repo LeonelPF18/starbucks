@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>/
+
+  <div class="circulo"></div>
+
+  <img src="img/logo.png" alt="logo Starbucks" class="logo">
+
+  <div class="conteudo">
+    <div class="caixa-texto">
+  <h2>It`s not just coffee, It`s <span>Starbucks</span></h2>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus exercitationem nisi voluptatem ad minus veritatis non maiores esse aspernatur eius? Doloribus rerum ex voluptatibus! Maiores iste quaerat suscipit magnam eius.</p>
+
+  <button>Peça aqui o seu!</button>
+    </div>
+  
+    <div class="caixa-imagem">
+  <img src="./img/img1.png" alt="Copo Starbucks" class="Starbucks">
+    </div>
+  </div>
+  
+  <div class="menu">
+  <img src="./img/img-pequena1.png" alt="Copo Starbucks" class="copinho verde">
+  <img src="./img/img-pequena2.png" alt="Copo Starbucks" class="copinho amarelo">
+  <img src="./img/img-pequena3 (1).png" alt="Copo Starbucks" class="copinho rosa">
+  </div>
+
+</body>
+
+<script>
+  let circulo = document.querySelector(".circulo")
+  let imgCopo = document.querySelector(".Starbucks")/*atribuindo uma variavel a imagem prara que possamos trabalhar e chamar ela quando quisermos, colocamos a variavel com um nome relativo ao objeto que vamos colocar dentro e como estamos no JavaScript temos que chamar o objeto da variavel dentro do documento html, entao usamos o "document" dizendo assim que eu quero que procure algo dentro do html e logo após ".querySelector(aqui vai a classe do objeto) que é o responsavel por fazer essa seleção dentro do documento a partir da classe do objeto e assim atribuir ele a variavel."*/
+  let verde = document.querySelector(".verde")
+  let amarelo = document.querySelector(".amarelo")
+  let rosa = document.querySelector(".rosa")
+
+  verde.addEventListener("click", () => { /*"verde." esta chamando a variavel coma classe verde, e o addEventListener(monitora aqui quando acontecer algum evento na variavel por exemplo "click", vai avisar que teve um clique na variavel citada e o "()" depois chama uma ação)*/
+    imgCopo.src = "./img/img1.png"/*Ação chamada pelo "()" de dentro do monitoramento do addEventListener, e aqui a ação foi de pegar a variavel imgCopo onde ja foi buscada dentro do html pelo querySelector e modicar o src, mudando assim para outro src (outra imagem) quando for colocado depois do sinal de "=" que srá a tribuição da nova imagem a essa variavel*/
+    circulo.style.background = "#00754a"/*faz a mesma coisa do exemplo acima porem agora pegando uma variavel de div que tem apenas cor e mudando de acordo com a cor dos copos*/
+  })
+
+  amarelo.addEventListener("click", () => {
+    imgCopo.src = "./img/img2.png"
+    circulo.style.background = "#eb7495"
+  })
+
+  rosa.addEventListener("click", () => {
+    imgCopo.src = "./img/img3.png"
+    circulo.style.background = "#d752b1"
+  })
+
+</script>
+
+</html>
